@@ -7,7 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+// Override default variables before the import
+$body-bg: white;
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';

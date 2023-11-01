@@ -1,0 +1,15 @@
+.cards-container {
+    padding: 0px 15px;
+
+    h2 {
+        margin: 20px 0px;
+        &::first-letter {
+            text-transform: uppercase; 
+        }
+    }
+}
+
+.cards-container .g-3 {
+    --bs-gutter-y: 30px;
+    --bs-gutter-x: 30px;
+}
