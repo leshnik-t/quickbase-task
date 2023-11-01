@@ -4,14 +4,20 @@
     $borderColor: ingredients.$dune, 
     $headerBgndColor: ingredients.$dune, 
     $headerTextColor: white, 
-    $linkBgndHoverColor: ingredients.$dune, 
-    $linkTextColor: black
+    $linkBgndHoverColor: ingredients.$picton-blue, 
+    $linkTextColor: black,
+    $titleColor: ingredients.$dune
 ) {
     border: 1px solid $borderColor;
 
     .card-header {
         background: $headerBgndColor;
         color: $headerTextColor;
+    }
+    .card-body {
+        .card-title {
+            color: $titleColor 
+        }
     }
 
     .card-footer {
@@ -32,13 +38,7 @@
     --bs-card-border-radius: 0;
     color: black;
     font-size: 16px;
-    @include theme(
-        $borderColor: ingredients.$dune, 
-        $headerBgndColor: ingredients.$dune, 
-        $headerTextColor: white, 
-        $linkBgndHoverColor: white, 
-        $linkTextColor: ingredients.$dune
-    );
+    @include theme;
 
     .card-header {
         padding: 15px;
@@ -64,7 +64,7 @@
             font-size: 24px;
             font-weight: bold;
             text-align: left;
-            padding:15px;
+            padding:15px 0px;
         }
 
         p {
@@ -106,8 +106,9 @@
         $borderColor: ingredients.$dune, 
         $headerBgndColor: ingredients.$asparagus, 
         $headerTextColor: black, 
-        $linkBgndHoverColor: ingredients.$asparagus, 
-        $linkTextColor: black
+        $linkBgndHoverColor: ingredients.$elm, 
+        $linkTextColor: white,
+        $titleColor: ingredients.$asparagus
     );
 }
 
@@ -116,8 +117,9 @@
         $borderColor: ingredients.$dune, 
         $headerBgndColor: ingredients.$carrot, 
         $headerTextColor: black, 
-        $linkBgndHoverColor: ingredients.$carrot, 
-        $linkTextColor: black
+        $linkBgndHoverColor: ingredients.$geraldine, 
+        $linkTextColor: black,
+        $titleColor: ingredients.$carrot
     );
 }
 
@@ -126,9 +128,31 @@
         $borderColor: ingredients.$dune, 
         $headerBgndColor: ingredients.$elm, 
         $headerTextColor: white, 
-        $linkBgndHoverColor: ingredients.$elm, 
-        $linkTextColor: white
+        $linkBgndHoverColor: ingredients.$asparagus, 
+        $linkTextColor: black,
+        $titleColor: ingredients.$elm
     );
+}
+
+.card.featured {
+    @include theme(
+        $headerBgndColor: ingredients.$chrome, 
+        $headerTextColor: black, 
+    );
+
+    background-color: ingredients.$elm;
+    color: white;
+
+    .card-header, .card-footer {
+        background-color: ingredients.$elm;
+        color: white;
+    }
+
+    .card-body {
+        .card-title {
+            color: white;
+        }
+    }
 }
 
 
